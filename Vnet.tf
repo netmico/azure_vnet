@@ -31,7 +31,7 @@ resource "azurerm_network_security_rule" "inbound_rule" {
     protocol                    = "TCP"
     source_port_range           = "*"
     destination_port_range      = "22"
-    source_address_prefix       = "*"
+    source_address_prefix       = "Your Local Public-IP"  
     destination_address_prefix  = "*"
     resource_group_name         = azurerm_resource_group.az_resources.name
     network_security_group_name = azure_network_security_group.adc_sec_gr.name
